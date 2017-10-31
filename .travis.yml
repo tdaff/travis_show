@@ -1,0 +1,10 @@
+language: python
+python:
+  - 2.7
+install:
+  - export PREVIOUS=$((${TRAVIS_JOB_NUMBER%.*}-1)).${TRAVIS_JOB_NUMBER#*.}
+  - gem install travis --no-rdoc --no-ri
+  - travis version --no-interactive
+script:
+  - travis show --no-interactive ${PREVIOUS} --debug
+
