@@ -1,3 +1,4 @@
+language: python
 install:
   - export PREVIOUS=$((${TRAVIS_JOB_NUMBER%.*}-1)).${TRAVIS_JOB_NUMBER#*.}
   - gem install travis --no-rdoc --no-ri
